@@ -24,8 +24,21 @@ group :development do
 end
 
 group :test do
+  # 必須
+  gem "minitest"
+  gem "minitest-rails"
+  gem "minitest-rails-capybara" # capybaraで結合テストできるようにする
+
+  gem "minitest-doc_reporter" # テスト結果の表示を整形
+
+  # 機能追加系
+  gem "minitest-stub_any_instance" # メソッドmockを追加できる様にする
+
+  gem "minitest-bang" # let文で遅延読み込みを使えるようにする
+  gem "minitest-line" # 行番号指定でテスト実行出来る様にする
+
+  gem "factory_girl" # DBのデータのモックを作成
   gem 'rails-controller-testing', '1.0.2'
-  gem 'minitest-reporters',       '1.1.14'
   gem 'guard',                    '2.13.0'
   gem 'guard-minitest',           '2.4.4'
 end
