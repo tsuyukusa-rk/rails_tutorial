@@ -14,7 +14,7 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     get static_pages_home_url
     assert_response :success
     # 出力されるviewのtitleに対してのassertion
-    assert_select "title", "Home | #{@base_title}"
+    assert_select "title", "Ruby on Rails Tutorial Sample App"
   end
   test "should get help" do
     get static_pages_help_url
