@@ -1,9 +1,9 @@
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
-# 動かない
-# 3章の最後の方
-# require "minitest"
+
+# rails 5から、
+# rails t -vで色付き出力がなされるようになったみたい
 
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests
